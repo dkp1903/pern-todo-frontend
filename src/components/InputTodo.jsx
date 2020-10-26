@@ -24,11 +24,40 @@ const InputTodo = () => {
                 console.error(error.message)
         }
     }
+    // let a = ''
+    // const onSubmitSearchByDescription = async (e) => {
+    //     e.preventDefault()
+    //     try {
+    //         const response = await fetch(`http://localhost:5000/todos/description/${a}`, {
+    //             method: 'GET',
+    //             headers: {
+    //                 'Content-Type': 'application/json'
+    //             },
+
+    //         })
+    //         console.log(response.json())
+    //     } catch(error) {
+    //             console.error(error.message)
+    //     }
+    // }
     return(
         <Fragment>
-            <h1 className='text-center mt-5'>
-                PERN Todo List
-            </h1>
+            {/* <div class="topnav">
+                <h1 className='text-center mt-5'>
+                    PERN Todo List
+                </h1>
+                <div class="search-container">
+    <form className='d-flex' onSubmit={onSubmitSearchByDescription}>
+      <input type="text" placeholder="Search.." name="search" onChange = {e => 
+                a=e.target.value}/>
+      <button type="submit" onClick={onSubmitSearchByDescription}><i class="fa fa-search"></i></button>
+    </form>
+  </div>
+                </div> */}
+                               <h1 className='text-center mt-5'>
+                    PERN Todo List
+                </h1>
+            
             <form className='d-flex mt-5' onSubmit={onSubmitForm}>
                 <input type='checkbox'className='form-control mt-2 mr-3'  checked={completed} onChange = {() => 
                 markCompleted(!completed)}/>

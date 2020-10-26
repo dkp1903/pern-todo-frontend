@@ -53,7 +53,7 @@ const EditTodo = ({ todo }) => {
 
               
               <div class="modal-body">
-                  <input type='checkbox'className='form-control mt-2 mr-3'  checked={completed? true : false}  onChange={e => markCompleted(e.target.value)}/>
+                  <input type='checkbox'className='form-control mt-2 mr-3'  checked={completed? true : false}  onChange={e => markCompleted(!completed)}/>
                   <input type='text' className='form-control mt-2 mr-3' placeholder='Edit Description' value={description} onChange={e => setDescription(e.target.value)}/>
                   <input type='number'className='form-control mt-2 mr-3' placeholder='Priority(1-5)' value={priority} onChange={e => setPriority(e.target.value)}/>
                   <input type='text'className='form-control mt-2 mr-3' placeholder='Edit Date' value={date} onChange={e => setDate(e.target.value)}/>
